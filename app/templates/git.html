@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Git Repos</title>
+		<style>
+			body {
+				background-image: url('/static/git_cloud.png');
+			}
+		</style>
+	</head>
+	<body>
+		<style="background-image: url('static/git_cloud.png')">
+		<a href="/index"><img src="/static/home_git.png" align="right" width="50px"></a>
+		</br>
+		
+		<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your GitHub repos ...</h2>
+		<table>
+		<tr>
+			<td>
+		<img src="/static/repo.png" width="400px">
+			</td>
+			<td></td><td></td><td></td><td></td>
+			<td style="background-image: #AD855C; width: 400px; border: 30px; padding: 10px; margin: 20px">	
+			{% if repos %}
+				{% for repo,lan in repos %}
+					<h4>{{ repo }} [ {{lan}} ]</h4>
+				{% endfor %}
+			{% endif %}
+			</td>
+		</tr>
+		<!-- /center -->
+	</body>
+</html>

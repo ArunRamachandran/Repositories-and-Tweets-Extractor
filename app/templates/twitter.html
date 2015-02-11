@@ -1,0 +1,46 @@
+<html>
+	<head>
+	<title>Tweets</title>
+		<style>
+			h3 {
+			   border: 30px;
+			   padding: 10px;
+			   margin: 10px;
+			   width: 500px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<a href="/index"><img src="/static/home_logo.png" align="right" width="50px"></a>
+		<center>
+		</br>
+		<table>
+		<tr>
+			<!-- td><img src="/static/found_tweets.jpg" width="300px"></td>
+		
+			<td></td><td></td><td><h2 style="color: #3399FF"> "I found your Tweets... "</h2></td -->
+			<td><h2 style="color: #3399FF">"I Found your Tweets....."</h2></td>
+			<td></td><td></td><td></td>
+			<td><img src="/static/I_found_your_tweets.png" width="100px"></td>
+		</tr>
+		</table>
+		</br><p></p>
+		</center>
+
+		<center>
+		<table>
+		{% if tweets %}
+			{% for tweet in tweets %}
+		<tr> 
+			<td><img src="/static/twitter.png" width="70px"></td>
+			<td></td><td></td><td></td><td></td>
+			<td><h3 style="background-color: #3399FF; color: white; font-family: Times New Roman">"{{ tweet }}"</h3></td>
+			<tr></tr>
+		</tr>
+			{% endfor %}
+		{% endif %}
+		</center>
+	</body>
+</html>
+		
